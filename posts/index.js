@@ -1,5 +1,5 @@
 const express = require('express');
-const { randamBytes } = require('crypto');
+const { randomBytes } = require('crypto');
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', (req, res) => {
-  const id = randamBytes(4).toString('hex');
+  const id = randomBytes(4).toString('hex');
   const { title } = req.body;
   posts[id] = {
     id,
