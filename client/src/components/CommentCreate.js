@@ -10,7 +10,7 @@ const CommentCreate = ({ postId }) => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:4001/posts/${postId}/comment`, {
+    await axios.post(`http://posts.com/posts/${postId}/comment`, {
       content,
     });
 
